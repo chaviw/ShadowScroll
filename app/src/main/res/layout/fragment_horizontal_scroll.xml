@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scrollviews.shadowedscroll.ShadowedScrollLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:rotation="-90"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="32dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:text="TEXT"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="600dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</com.scrollviews.shadowedscroll.ShadowedScrollLinearLayout>

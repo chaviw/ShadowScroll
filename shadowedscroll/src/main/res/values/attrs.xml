@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShadowedScrollLinearLayout">
+        <attr name="android:orientation"/>
+        <attr name="shadowElevation" format="dimension"/>
+        <attr name="shadowDrawable" format="reference"/>
+        <attr name="shadowColor" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShadowedScrollLinearLayout_LayoutParams">
+        <attr name="scrollable" format="boolean"/>
+    </declare-styleable>
+</resources>
