@@ -39,6 +39,10 @@ class MenuFragment: Fragment() {
         view.findViewById(R.id.vertical_scroll_with_index).setOnClickListener {
             scrollTestActivity?.showFragmentWithLayout(R.layout.fragment_vertical_scroll_index)
         }
+
+        view.findViewById(R.id.vertical_scroll_with_list_view).setOnClickListener {
+            scrollTestActivity?.showListViewFragment()
+        }
     }
 
     override fun onDetach() {

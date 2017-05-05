@@ -45,6 +45,11 @@
                 android:id="@+id/vertical_scroll_with_index"
                 style="@style/MenuButtonStyle"
                 android:text="@string/vertical_scroll_with_index" />
+
+            <Button
+                android:id="@+id/vertical_scroll_with_list_view"
+                style="@style/MenuButtonStyle"
+                android:text="@string/vertical_scroll_with_list_view" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

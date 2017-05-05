@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ShadowScroll.iml" filepath="$PROJECT_DIR$/ShadowScroll.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/shadowedscroll/shadowedscroll.iml" filepath="$PROJECT_DIR$/shadowedscroll/shadowedscroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shadowscroll.iml" filepath="$PROJECT_DIR$/shadowscroll.iml" />
     </modules>
   </component>
 </project>

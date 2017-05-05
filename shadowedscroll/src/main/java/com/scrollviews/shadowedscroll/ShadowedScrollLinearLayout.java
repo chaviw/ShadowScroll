@@ -16,10 +16,14 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.scollviews.shadowedscroll.R;
+
+import static android.R.attr.scrollY;
 
 /**
  * Created by chavi on 1/24/17.
@@ -161,6 +165,8 @@ public class ShadowedScrollLinearLayout extends LinearLayout {
 
         if (childWithScroll instanceof RecyclerView) {
             setUpRecyclerView((RecyclerView) childWithScroll);
+        } else if (childWithScroll instanceof AbsListView) {
+            setUpAbsListView((AbsListView) childWithScroll);
         } else {
             setUpScrollView(childWithScroll);
         }
@@ -187,6 +193,30 @@ public class ShadowedScrollLinearLayout extends LinearLayout {
         });
     }
 
+    private void setUpAbsListView(@NonNull AbsListView absListView) {
+        absListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                View v = absListView.getChildAt(0);
+                int scrollY = (v == null) ? 0 : (v.getTop() - absListView.getPaddingTop());
+                int scrollX = (v == null) ? 0 : (v.getLeft() - absListView.getPaddingLeft());
+
+                switch (orientation) {
+                    case VERTICAL:
+                    default:
+                        addShadowIfScrolledVertically(scrollY);
+                        break;
+                    case HORIZONTAL:
+                        addShadowIfScrolledHorizontally(scrollX);
+                        break;
+                }
+            }
+        });
+    }
 
     private void setUpScrollView(@NonNull final View view) {
         view.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {

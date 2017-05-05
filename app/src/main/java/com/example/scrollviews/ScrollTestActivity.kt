@@ -26,6 +26,10 @@ class ScrollTestActivity : AppCompatActivity() {
         showFragment(ScrollFragment.createInstance(layoutId))
     }
 
+    fun showListViewFragment() {
+        showFragment(ListViewFragment())
+    }
+
     private fun showFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragment)

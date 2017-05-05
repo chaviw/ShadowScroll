@@ -6,4 +6,5 @@
     <string name="vertical_scroll_with_color">Vertical Scroll with Color</string>
     <string name="vertical_scroll_with_drawable">Vertical Scroll with Drawable</string>
     <string name="vertical_scroll_with_index">Vertical Scroll with Index</string>
+    <string name="vertical_scroll_with_list_view">Vertical Scroll with ListView</string>
 </resources>
