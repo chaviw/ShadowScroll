@@ -1,1 +1,1 @@
-include ':app', ':shadowedscroll'
+include ':example', ':shadowedscroll'
